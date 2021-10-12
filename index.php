@@ -1,10 +1,10 @@
 <?php
 	include 'arrayClass.php';
 
-	$oneDArray = new RandomOneDarray(3, 0, 10);
+	$oneDArray = new RandomOneDarray(10, 0, 10);
 	$b = $oneDArray->getArray();
 
-	$matrix = new RandomMatrix(3,3,0,40);
+	$matrix = new RandomMatrix(10,10,0,40);
 	$m = $matrix->getArray();
 	$matrix->makeArrayIntersect($b);
 	$intersect = $matrix->getArrayIntersect();
@@ -21,7 +21,7 @@
  		<h2>Intersections of arrays of random numbers</h2>
 		<div class="row">
  			<div class="col-lg-4 col-sm-6 col-12">
- 				<h5>One-dimensional array</h5>
+ 				<h5>One-dimensional array B</h5>
 				<table class="table table-striped">
 				  <thead>
 				    <tr>
@@ -46,7 +46,7 @@
 			</div>
 
 			<div class="col-lg-4 col-sm-6 col-12">
-				<h5>Two-dimensional array</h5>
+				<h5>Two-dimensional array A</h5>
 					<table class="table table-striped">
 					  <thead>
 					    <tr>
@@ -79,8 +79,8 @@
 				    <tr>
 				    	<?php 
 				    		$rows = $matrix->getRowTotalNum();
-					    	for ($i=0; $i < $rows; $i++) { 
-					    		echo '<th scope="col">'.($i+1).'</th>';
+					    	for ($i=0; $i < $len; $i++) { 
+					    		echo '<th scope="col">'.$b[$i].'</th>';
 					    	}
 				    	?>
 				    </tr>
